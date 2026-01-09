@@ -19,6 +19,12 @@ jobs:
         
     steps:
     - uses: actions/checkout@v4
+    
+    - uses: ./.github/workflows/echo.yml
+      name: Echo Task
+      with:
+        msg: Hello world from India !
+        
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
