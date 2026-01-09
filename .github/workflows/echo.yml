@@ -1,0 +1,11 @@
+description: "My Reusable Job"
+inputs:
+  msg:
+    description: A message to be displayed
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+  - name: Say Hello
+    run: echo ${{ inputs.msg }}
